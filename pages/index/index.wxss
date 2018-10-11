@@ -1,0 +1,123 @@
+/**index.wxss**/
+@font-face{
+  font-family: 'webfont';
+  src:url('../font/number.ttf');
+
+}
+page{
+ background:#eee;
+}
+.container{
+  padding:0;
+
+}
+.userBg{
+  width:100%;
+  height:360rpx;
+   -webkit-filter: blur(2px);
+  filter: blur(2px); 
+}
+.userinfo {
+  position:absolute;
+  top:80rpx;
+  left:50%;
+  transform:translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #ddd;
+}
+.contentTitle{
+  /* font-family: "webfont" !important; */
+  margin:30rpx 40rpx 0;
+  padding:10rpx 20rpx;
+  color:#fff;
+  font-weight: bold;
+  letter-spacing: 5rpx;
+  font-size:32rpx;
+  background:#91d487;
+  border-radius: 12rpx 12rpx 0 0;
+  box-shadow: 3px 3px 3px #ddd; 
+  text-align:center;
+}
+.contList{
+  height:360rpx;
+  padding:10rpx 20px 40rpx; 
+  margin:0 40rpx 10rpx;
+  background:#ffffff;
+  box-shadow: 3px 3px 3px #ddd; 
+  overflow: hidden;
+  text-align:center;
+  position:relative;
+}
+.contList image{
+   max-width:360rpx; 
+  height:100%;
+}
+.contList text{
+  display:block;
+  padding:100rpx 0;
+  font-size:30rpx;
+}
+.saveBtn,.deleteBtn{
+  position:absolute;
+  right:20rpx;
+  bottom:12rpx;
+  font-size:28rpx;
+  padding:0 20rpx;
+  background:none;
+  color:#82c078;
+  line-height:1;
+}
+.deleteBtn::after,.saveBtn::after{
+  border:0;
+}
+.deleteBtn{
+  right:200rpx;
+  color:#f36d80;
+}
+ .usermotto {
+  position:fixed;
+  bottom:8rpx;
+  left:50%;
+  margin-left:-80rpx;
+
+} 
+.drawBtn{
+  width:132rpx;
+  height:132rpx;
+  line-height:132rpx;
+  font-size:34rpx;
+  font-weight: bold;
+  letter-spacing: 5rpx;
+  background:#91d487;
+  color:#ffffff;
+  border-radius: 50%;
+  border:0;
+  box-shadow: 3px 3px 3px #aaa; 
+}
+.drawBtn.button-hover{
+   background:#82c078;
+   color:#efefef;
+}
+.sucTip{
+  /* display:block; */
+  position:fixed;
+  bottom:45%;
+  left:50%;
+  transform: translateX(-50%);
+  color:#fff;
+  padding:10rpx 20rpx;
+  border-radius: 5px;
+  background:#91d487;
+}

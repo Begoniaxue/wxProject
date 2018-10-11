@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userBg" style="background:url({{userInfo.avatarUrl}}) no-repeat center center;background-size:cover"></view>
+  <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="content">
+    <view class="contentTitle"> 2342343</view>
+    <block wx:if="{{myProducts.length > 0}}">
+     <view wx:for="{{myProducts}}" class="contList">
+      <image lazy-load="true" src="{{item}}" mode="aspectFit"></image>
+      <button class="saveBtn" bindtap="saveImg" data-value="{{item}}">保存到相册</button>
+      <button class="deleteBtn" bindtap="showDeleteTip" data-value="{{index}}">删除</button>
+     </view>
+    </block>
+   
+    <view wx:else class="contList"> <text>暂无作品，快点击制作吧</text></view>
+  </view>
+  <text class="sucTip" hidden="{{isSuc}}">保存成功</text>
+  <view class="usermotto">
+    <button class="drawBtn" bindtap="beginDraw">制作</button>
+  </view>
+</view>
